@@ -7,7 +7,7 @@ const MyNavbar = () => {
   return (
     <Navbar expand="lg" className="custom-navbar fixed-top">
       <Container>
-        <Navbar.Brand href="#">Fitness</Navbar.Brand>
+        <Navbar.Brand href="#">O+ Fitness</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">

@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="row text-center text-md-start">
           {/* Logo + text */}
           <div className="col-md-4 mb-4">
-            <h4 className="fw-bold">Fitness</h4>
+            <h4 className="fw-bold">O+ Fitness</h4>
             <p className="text-light">Nutrition tracking for real life.</p>
             <button className="btn btn-light text-primary fw-bold rounded-pill">
               START TODAY <i className="bi bi-arrow-right-short"></i>
@@ -49,7 +49,7 @@ const Footer = () => {
         {/* Footer bottom */}
         <div className="border-top border-secondary mt-4 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
           <p className="mb-3 mb-md-0 small text-light">
-            ©2025 MyFitnessPal, Inc. Community Guidelines · Feedback · Terms · Privacy · API · Cookie Preferences
+            ©2025 O+ Fitness, Inc. Community Guidelines · Feedback · Terms · Privacy · API · Cookie Preferences
           </p>
 
           <div className="d-flex justify-content-center gap-3 fs-5">
