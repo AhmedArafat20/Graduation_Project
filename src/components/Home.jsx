@@ -12,7 +12,7 @@ const Home = () => {
           <h5>#1 nutrition tracking app</h5>
           <h1 className="display-3 fw-bold">
             Nutrition tracking <br />
-            for <span className="highlight">real lifee</span>
+            for <span className="highlight">real life</span>
           </h1>
           <p className="lead">
             Make progress with the all-in-one food, exercise, and calorie tracker.
