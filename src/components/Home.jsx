@@ -113,7 +113,7 @@ const Home = () => {
             </div>
             <div className="col-md-6">
               <motion.img
-                src="/public/image-portrait.png"
+                src="/image-portrait.png"
                 alt="Track Exercise"
                 className="feature-image"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -224,7 +224,7 @@ const Home = () => {
             </p>
             <div className="col-md-6 d-flex justify-content-between align-items-center gap-3">
               <motion.img
-                src="/public/community.png"
+                src="/community.png"
                 alt="Track Progress"
                 className="feature-image"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -235,7 +235,7 @@ const Home = () => {
               />
 
               <motion.img
-                src="/public/fav.png"
+                src="/fav.png"
                 alt="Track Progress"
                 className="feature-image"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -245,7 +245,7 @@ const Home = () => {
                 style={{ width: "48%" }}
               />
               <motion.img
-                src="/public/healthcloud.png"
+                src="/healthcloud.png"
                 alt="Track Progress"
                 className="feature-image"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -255,7 +255,7 @@ const Home = () => {
                 style={{ width: "48%" }}
               />
               <motion.img
-                src="/public/news.png"
+                src="/news.png"
                 alt="Track Progress"
                 className="feature-image"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -265,7 +265,7 @@ const Home = () => {
                 style={{ width: "48%" }}
               />
               <motion.img
-                src="/public/profile.png"
+                src="/profile.png"
                 alt="Track Progress"
                 className="feature-image"
                 initial={{ opacity: 0, scale: 0.9 }}
