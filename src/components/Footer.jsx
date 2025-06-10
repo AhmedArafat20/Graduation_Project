@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="row text-center text-md-start">
           {/* Logo + text */}
           <div className="col-md-4 mb-4">
-            <h4 className="fw-bold">O+ Fitness</h4>
+            <h4 className="fw-bold">Fitweb</h4>
             <p className="text-light">Nutrition tracking for real life.</p>
             <button className="btn btn-light text-primary fw-bold rounded-pill">
               START TODAY <i className="bi bi-arrow-right-short"></i>
