@@ -237,78 +237,45 @@ const Home = () => {
       {/* --- Extra Sections Below --- */}
 
       <section className="content-section bg-light text-dark">
-        <Container>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-            <h2>About Us</h2>
-            <p>
-              Fit App Advisor helps you live a healthier life through smart,
-              personalized nutrition tracking and insights. We offer a
-              user-friendly app that adapts to your lifestyle, showing your
-              progress through clear visuals and real app screenshots — so you
-              know exactly what to expect before you start. Track better. Eat
-              smarter. Live healthier.
-            </p>
-            <div className="col-md-6 d-flex justify-content-between align-items-center gap-3">
-              <motion.img
-                src="/community.png"
-                alt="Track Progress"
-                className="feature-image"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                style={{ width: "48%" }}
-              />
+  <Container>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+    >
+      <h2>About Us</h2>
+      <p>
+        Fit App Advisor helps you live a healthier life through smart,
+        personalized nutrition tracking and insights. We offer a
+        user-friendly app that adapts to your lifestyle, showing your
+        progress through clear visuals and real app screenshots — so you
+        know exactly what to expect before you start. Track better. Eat
+        smarter. Live healthier.
+      </p>
 
-              <motion.img
-                src="/fav.png"
-                alt="Track Progress"
-                className="feature-image"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                style={{ width: "48%" }}
-              />
-              <motion.img
-                src="/healthcloud.png"
-                alt="Track Progress"
-                className="feature-image"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                style={{ width: "48%" }}
-              />
-              <motion.img
-                src="/news.png"
-                alt="Track Progress"
-                className="feature-image"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                style={{ width: "48%" }}
-              />
-              <motion.img
-                src="/profile.png"
-                alt="Track Progress"
-                className="feature-image"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                style={{ width: "48%" }}
-              />
-            </div>
-          </motion.div>
-        </Container>
-      </section>
+      {/* Image grid on all screen sizes */}
+      <div className="d-flex flex-wrap justify-content-between align-items-center gap-3">
+        {['/community.png', '/fav.png', '/healthcloud.png', '/news.png', '/profile.png'].map((src, i) => (
+          <motion.img
+            key={i}
+            src={src}
+            alt="Track Progress"
+            className="feature-image"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            style={{ width: "19%", minWidth: "100px" }}
+
+          />
+        ))}
+      </div>
+    </motion.div>
+  </Container>
+</section>
+
+
 
       <section className="content-section bg-white text-dark" id="features">
         <Container>
