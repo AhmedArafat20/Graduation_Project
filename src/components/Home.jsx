@@ -1,9 +1,11 @@
-import React from "react";
-import { Container, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Button, Modal } from "react-bootstrap";
 import { motion } from "framer-motion";
 import "./Home.css";
 
 const Home = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
       {/* Hero Section */}
@@ -15,15 +17,44 @@ const Home = () => {
             for <span className="highlight">real life</span>
           </h1>
           <p className="lead">
-            Make progress with the all-in-one food, exercise, and calorie
-            tracker.
+            Make progress with the all-in-one food, exercise, and calorie tracker.
           </p>
-          <Button className="cta-btn">START TODAY →</Button>
+          <Button className="cta-btn" onClick={() => setShowModal(true)}>
+            START TODAY →
+          </Button>
         </Container>
         <div className="phone-image">
           <img src="/home.png" alt="App Screenshot" />
         </div>
       </div>
+
+      {/* Modal */}
+      <Modal show={showModal} onHide={() => setShowModal(false)} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Download the App</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          To continue, please download the app from one of the stores below.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="success"
+            onClick={() =>
+              window.open("https://play.google.com/store/apps/details?id=com.yourapp", "_blank")
+            }
+          >
+            Google Play
+          </Button>
+          <Button
+            variant="primary"
+            onClick={() =>
+              window.open("https://apps.apple.com/app/id123456789", "_blank")
+            }
+          >
+            App Store
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
       {/* Section 1 */}
       <section className="feature-section bg-white">

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Button, Modal } from "react-bootstrap";
 
 const Footer = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <footer className="bg-dark text-white pt-5 pb-3 px-4">
       <div className="container">
@@ -10,9 +13,12 @@ const Footer = () => {
           <div className="col-md-4 mb-4">
             <h4 className="fw-bold">Fitweb</h4>
             <p className="text-light">Nutrition tracking for real life.</p>
-            <button className="btn btn-light text-primary fw-bold rounded-pill">
+            <Button
+              className="btn btn-light text-primary fw-bold rounded-pill hover-blue"
+              onClick={() => setShowModal(true)}
+            >
               START TODAY <i className="bi bi-arrow-right-short"></i>
-            </button>
+            </Button>
           </div>
 
           {/* Links */}
@@ -74,6 +80,40 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      <Modal show={showModal} onHide={() => setShowModal(false)} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Download the App</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          To continue, please download the app from one of the stores below.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="success"
+            onClick={() => window.open("https://play.google.com/store/apps/details?id=com.yourapp", "_blank")}
+          >
+            Google Play
+          </Button>
+          <Button
+            variant="primary"
+            onClick={() => window.open("https://apps.apple.com/app/id123456789", "_blank")}
+          >
+            App Store
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <style>
+        {`
+          .hover-blue:hover {
+            background-color: #0d6efd !important;
+            color: white !important;
+            border-color: #0d6efd !important;
+          }
+        `}
+      </style>
     </footer>
   );
 };
