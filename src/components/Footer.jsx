@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { Button, Modal } from "react-bootstrap";
+import { FaGooglePlay, FaApple } from 'react-icons/fa';
+import { Button, Modal } from "react-bootstrap"; // حافظنا على Button و Modal لأجل زر "START TODAY" والمودال
 
 const Footer = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <footer className="bg-dark text-white pt-5 pb-3 px-4">
-      <div className="container">
-        <div className="row text-center text-md-start">
-          {/* Logo + text */}
-          <div className="col-md-4 mb-4">
+    <footer className="bg-dark text-white pt-4 pb-2 px-4"> {/* قللنا الـ padding قليلاً */}
+      <div className="container text-center"> {/* جعلنا المحتوى في المنتصف دائماً للتبسيط */}
+        <div className="row justify-content-center"> {/* لتوسيط المحتوى */}
+          {/* Logo + text (أبقينا هذا الجزء كما هو لأنه يمثل التطبيق) */}
+          <div className="col-md-6 col-lg-4 mb-3"> {/* عدلنا الـ col ليناسب التخطيط الأبسط */}
             <h4 className="fw-bold">Fitweb</h4>
-            <p className="text-light">Nutrition tracking for real life.</p>
+            <p className="text-light mb-3">Nutrition tracking for real life.</p>
             <Button
               className="btn btn-light text-primary fw-bold rounded-pill hover-blue"
               onClick={() => setShowModal(true)}
@@ -21,44 +22,20 @@ const Footer = () => {
             </Button>
           </div>
 
-          {/* Links */}
-          <div className="col-md-2 mb-3">
-            <h6 className="fw-bold">Products</h6>
+          {/* Contact & Legal Info - دمجناها في قسم واحد */}
+          <div className="col-md-6 col-lg-4 mb-3"> {/* عدلنا الـ col ليناسب التخطيط الأبسط */}
+            <h6 className="fw-bold mb-2">Contact Us</h6>
             <ul className="list-unstyled text-light">
-              <li>Exercise</li>
-              <li>Apps</li>
-              <li>Premium</li>
-            </ul>
-          </div>
-
-          <div className="col-md-3 mb-3">
-            <h6 className="fw-bold">Resources</h6>
-            <ul className="list-unstyled text-light">
-              <li>Blog</li>
-              <li>Community</li>
-              <li>Contact Us</li>
-              <li>Support Center</li>
-            </ul>
-          </div>
-
-          <div className="col-md-3 mb-3">
-            <h6 className="fw-bold">Company</h6>
-            <ul className="list-unstyled text-light">
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>Press</li>
-              <li>Advertise With Us</li>
+              <li>Email: <a href="mailto:ahmedarafatt237@gmail.com" className="text-white text-decoration-none">ahmedarafatt237@gmail.com</a></li>
+              <li>Phone: <a href="tel:01091434793" className="text-white text-decoration-none">01091434793</a></li>
+              <li className="mt-2"><a href="#" className="text-white text-decoration-none">Privacy Policy</a></li> {/* يمكن أن يكون هذا رابطًا وهميًا أو لصفحة بسيطة */}
+              <li><a href="#" className="text-white text-decoration-none">Terms of Service</a></li> {/* يمكن أن يكون هذا رابطًا وهميًا أو لصفحة بسيطة */}
             </ul>
           </div>
         </div>
 
-        {/* Footer bottom */}
-        <div className="border-top border-secondary mt-4 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
-          <p className="mb-3 mb-md-0 small text-light">
-            ©2025 O+ Fitness, Inc. Community Guidelines · Feedback · Terms · Privacy · API · Cookie Preferences
-          </p>
-
-          <div className="d-flex justify-content-center gap-3 fs-5">
+        {/* Social Media Icons */}
+        <div className="border-top border-secondary mt-3 pt-3 d-flex justify-content-center gap-3 fs-5"> {/* وسّطنا الأيقونات */}
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white">
               <i className="bi bi-instagram"></i>
             </a>
@@ -77,10 +54,15 @@ const Footer = () => {
             <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" className="text-white">
               <i className="bi bi-tiktok"></i>
             </a>
-          </div>
         </div>
+
+        {/* Copyright */}
+        <p className="mt-3 mb-0 small text-light"> {/* عدلنا الـ margin */}
+          ©2025 Fitweb. All rights reserved.
+        </p>
       </div>
 
+      {/* Modal - أبقيناه كما هو */}
       {/* Modal */}
       <Modal show={showModal} onHide={() => setShowModal(false)} centered>
         <Modal.Header closeButton>
@@ -93,18 +75,21 @@ const Footer = () => {
           <Button
             variant="success"
             onClick={() => window.open("https://play.google.com/store/apps/details?id=com.yourapp", "_blank")}
+            className="d-flex align-items-center justify-content-center gap-2" // لجعل الأيقونة والنص في سطر واحد وبتوسيط
           >
-            Google Play
+            <FaGooglePlay size={20} /> Google Play
           </Button>
           <Button
             variant="primary"
             onClick={() => window.open("https://apps.apple.com/app/id123456789", "_blank")}
+            className="d-flex align-items-center justify-content-center gap-2" // لجعل الأيقونة والنص في سطر واحد وبتوسيط
           >
-            App Store
+            <FaApple size={20} /> App Store {/* استخدمنا FaApple هنا، يمكنك تغييرها إذا أردت FaAppStoreIos */}
           </Button>
         </Modal.Footer>
       </Modal>
 
+      {/* Style block - أبقيناه كما هو */}
       <style>
         {`
           .hover-blue:hover {
